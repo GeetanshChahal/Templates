@@ -1,32 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
-template <typename T>   //template declaration
+ //template declaration
+template <typename T>  
 string binary_search(T arr[],int arr_size,T key){
-    
-    sort(arr,arr+arr_size); //to sort the array 
-    
-    int start=0;        //start is at the first element of array
-    int end=arr_size-1; //end is at the last element of array
+    //to sort the array 
+    sort(arr,arr+arr_size); 
+    //start is at the first element of array
+    int start=0;      
+    //end is at the last element of array
+    int end=arr_size-1; 
     
     while(start<=end){
         int mid=(start+end)/2;
-        if(arr[mid]==key){  //if element at mid is equal to key then element is present
-            return "Element is present!!";  //to know the index of element we can return arr[mid]
+        //if element at mid is equal to key then element is present
+        if(arr[mid]==key){
+            //to know the index of element we can also return arr[mid]
+            return "Element is present!!";  
         }
-        else if(arr[mid]>key){ //if element at mid is greater than key then element is present in the left part of start to mid-1
-            end=mid-1;      //reduce the seart part by making mid-1 as the end of searching elements
+        //if element at mid is greater than key then element is present in the left part of start to mid-1
+        else if(arr[mid]>key){ 
+             //reduce the seart part by making mid-1 as the end of searching elements
+            end=mid-1;     
         }
-        else{           //if element at mid is smaller than key then element is present in the right part of mid+1 to end
-            start=mid+1;    //reduce the seart part by making mid+1 as the start of searching elements
+        //if element at mid is smaller than key then element is present in the right part of mid+1 to end
+        else{      
+             //reduce the seart part by making mid+1 as the start of searching elements
+            start=mid+1;   
         }
     }
-    return "Element is not present!!"; //if element is not present in the array
+    //if element is not present in the array
+    return "Element is not present!!"; 
 }
 int main()
 {
     //Testing for int
     int arr1[5]={1,5,20,64,86};
-    cout<<"For int:-\n"<<binary_search<int>(arr1,5,64)<<endl;   //usage syntax: binary_search<datatype>(array_name,array_size,search_key);
+    //usage syntax: binary_search<datatype>(array_name,array_size,search_key);
+    cout<<"For int:-\n"<<binary_search<int>(arr1,5,64)<<endl;   
     cout<<binary_search<int>(arr1,5,14)<<endl;  
     cout<<endl;
     
