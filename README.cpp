@@ -33,7 +33,7 @@ string binary_search(T arr[],int arr_size,T key){
 }
 int main()
 {
-    //Testing for int
+    //Testing for integers
     int arr1[5]={1,5,20,64,86};
     //usage syntax: binary_search<datatype>(array_name,array_size,search_key);
     cout<<"For int:-\n"<<binary_search<int>(arr1,5,64)<<endl;   
