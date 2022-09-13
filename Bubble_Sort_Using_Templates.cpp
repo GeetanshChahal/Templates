@@ -22,28 +22,28 @@ int main()
 {
     //Testing for integer
     int arr1[5]={10,8,14,5,3};
-    bubble_sort(arr1,5);  //calling selection_sort function with array and its size as parameters
+    bubble_sort<int>(arr1,5);  //calling selection_sort function with array and its size as parameters
     cout<<"For integers:\n";
     display(arr1,5);        //calling display function for printing array elements
     cout<<endl;
     
     //Testing for double
     double arr2[5]={62.84,42.4,15.4,3.94,12.4};
-    bubble_sort(arr2,5);
+    bubble_sort<double>(arr2,5);
     cout<<"For doubles:\n";
     display(arr2,5);
     cout<<endl;
     
     //Testing for character
     char arr3[5]={'b','a','d','q','c'};
-    bubble_sort(arr3,5);
+    bubble_sort<char>(arr3,5);
     cout<<"For characters:\n";
     display(arr3,5);
     cout<<endl;
     
     //Testing for string
     string arr4[5]={"Grapes","Apple","Mango","Kiwi","Banana"};
-    bubble_sort(arr4,5);
+    bubble_sort<string>(arr4,5);
     cout<<"For strings:\n";
     display(arr4,5);
     cout<<endl;
