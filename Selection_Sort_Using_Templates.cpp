@@ -23,28 +23,28 @@ int main()
 {
     //Testing for integer
     int arr1[5]={4,5,3,1,2};
-    selection_sort(arr1,5); //calling selection_sort function with array and its size as parameters
+    selection_sort<int>(arr1,5); //calling selection_sort function with array and its size as parameters
     cout<<"For integers:\n";
     display(arr1,5);        //calling display function for printing array elements
     cout<<endl;
     
     //Testing for double
     double arr2[5]={36.54,6.4,15.4,62.94,7.4};
-    selection_sort(arr2,5);
+    selection_sort<double>(arr2,5);
     cout<<"For doubles:\n";
     display(arr2,5);
     cout<<endl;
     
     //Testing for character
     char arr3[5]={'a','q','k','d','b'};
-    selection_sort(arr3,5);
+    selection_sort<char>(arr3,5);
     cout<<"For characters:\n";
     display(arr3,5);
     cout<<endl;
     
     //Testing for string
     string arr4[5]={"Grapes","Apple","Mango","Kiwi","Banana"};
-    selection_sort(arr4,5);
+    selection_sort<string>(arr4,5);
     cout<<"For strings:\n";
     display(arr4,5);
     cout<<endl;
